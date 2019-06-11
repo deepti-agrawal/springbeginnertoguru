@@ -1,5 +1,7 @@
 package guru.springframework.spring5webapp.model;
 
+import sun.net.idn.Punycode;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +15,8 @@ public class Publisher {
     private Long id;
     private String name;
     private String address;
+
+    public Publisher(){}
 
     public Publisher(String name, String address) {
         this.name = name;
