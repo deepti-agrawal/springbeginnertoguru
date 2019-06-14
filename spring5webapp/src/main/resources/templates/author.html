@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Spring Framework Guru</title>
 </head>
 <body>
+<h1>Author List</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Book Name</th>
+        <th>Publisher</th>
+    </tr>
+    <!--/*@thymesVar id="authors" type="templates"*/-->
+    <tr th:each="book : ${authors}">
+        <td th.text="author.id">123</td>
+        <td th.text="author.firstName">Deepti</td>
+        <td th.text="author.lastName">Agrawal</td>
+    </tr>
+</table>
 
 </body>
 </html>
